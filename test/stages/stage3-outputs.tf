@@ -5,8 +5,8 @@ resource null_resource write_outputs {
 
     environment = {
       OUTPUT = jsonencode({
-        bucket_id = module.aws-s3-bucket.bucket_id
-        region   = module.aws-s3-bucket.region
+        s3_bucket_id       = module.aws-s3-bucket.s3_bucket_id
+        s3_bucket_region   = module.aws-s3-bucket.s3_bucket_region
       })
     }
   }
