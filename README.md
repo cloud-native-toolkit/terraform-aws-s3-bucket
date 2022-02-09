@@ -37,8 +37,7 @@ provider "aws" {
 
 module "aws-s3-bucket" {
   source = "github.com/cloud-native-toolkit/terraform-aws-s3-bucket.git"
-  bucket = module.aws-s3-instance.bucket.id
-  s3_bucket_region = aws_s3_bucket.s3_bucket.region
+  bucket_id = module.aws_s3_instance.s3_bucket_id
 }
 ```
 
