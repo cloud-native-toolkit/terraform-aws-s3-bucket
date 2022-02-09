@@ -5,8 +5,8 @@ resource null_resource write_outputs {
 
     environment = {
       OUTPUT = jsonencode({
-        name        = module.aws-s3-bucket.bucket
-        sub_chart   = module.aws-s3-bucket.s3_bucket_region
+        bucket        = module.aws-s3-bucket.bucket
+        s3_bucket_region   = module.aws-s3-bucket.s3_bucket_region
       })
     }
   }

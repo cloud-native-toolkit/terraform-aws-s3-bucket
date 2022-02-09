@@ -24,6 +24,7 @@ variable "secret_key" {
 variable "file_path" {
   type    = string
   default = "Datafiles/aws"
+  description = "Path to a folder that will be read and uploaded "
 }
 
 
