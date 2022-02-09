@@ -1,5 +1,6 @@
-variable "bucket_name" {
-    default = "swew_bucket"
+variable "bucket_id" {
+    type    = string
+    default = ""
 }
 
 variable "acl_value" {

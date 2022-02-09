@@ -1,6 +1,6 @@
 locals {
   file_path = var.file_path
-  s3_bucket_id = var.bucket_name
+  s3_bucket_id = var.bucket_id
 }
 
 resource "aws_s3_bucket_object" "s3fileupload" {
