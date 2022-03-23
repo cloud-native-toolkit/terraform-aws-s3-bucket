@@ -8,6 +8,21 @@ tags:
   - file upload
 versions:
   - platforms: []
-    dependencies: []
-    variables: []
+    providers:
+      - name: aws
+        source: "hashicorp/aws"
+    dependencies: 
+      - id: aws-s3-instance
+        refs:
+          - source: github.com/cloud-native-toolkit/terraform-aws-s3-instance
+            version: ">= 1.1.0"
+    variables:
+      - name: bucket_id
+        moduleRef:
+          id: aws-s3-instance
+          output: s3_bucket_id
+      - name: region
+        moduleRef:
+          id: aws-s3-instance
+          output: s3_bucket_region    
 cloudProvider: aws
